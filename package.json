@@ -1,0 +1,44 @@
+{
+  "name": "backend1",
+  "version": "1.0.0",
+  "description": "Curso impartido por mi queridicimo amigo don Bosco",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/app.js",
+    "lint": "eslint . --fix --ext .js"
+  },
+  "keywords": [],
+  "author": "Carlos Ruiz",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.28.5",
+    "axios": "^0.27.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-useragent": "^1.0.15",
+    "helmet": "^5.1.0",
+    "moment": "^2.29.3",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "public-ip": "^6.0.0",
+    "sequelize": "^6.20.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.5",
+    "@babel/node": "^7.18.5",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-optional-chaining": "^7.17.12",
+    "@babel/preset-env": "^7.18.2",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.2",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.16"
+  }
+}
