@@ -3,7 +3,12 @@ import modules from './modules'
 import { constants, sequelizeConfig } from './config'
 import { api } from './api'
 
+// IMPORT LOGGER
+import Logger from './logs/logger.logs'
+
 async function startServer () {
+  const logger = new Logger({ enviroment: constants.NODE_ENV }).getLogger()
+
   const app = express()
 
   await modules.init({
@@ -14,10 +19,10 @@ async function startServer () {
 
   app.listen(constants.PORT, (err) => {
     if (err) {
-      console.log(err)
-      return
+      logger.error(err)
     }
-    console.log('Server is runing on port', constants.PORT)
+    logger.info(`🚀 Server running on port ${constants.PORT}`)
+    // console.log('Server is runing on port', constants.PORT)
   })
 }
 
